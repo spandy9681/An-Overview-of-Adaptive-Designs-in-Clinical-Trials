@@ -1,0 +1,2519 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\setbeamercovered{transparent = 10}
+\usefonttheme{professionalfonts}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+An Overview of 
+\begin_inset Newline newline
+\end_inset
+
+Adaptive Designs
+\end_layout
+
+\begin_layout Author
+Ritwick Mondal 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Kalpesh Chatterjee 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Niranjan Dey 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ Spandan Ghoshal 
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameTitle
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+presentation
+\end_layout
+
+\end_inset
+
+Contents
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Introduction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Response-adaptive designs, or response-adaptive randomization procedures,
+ are designs that 
+\series bold
+change allocation away 
+\series default
+from 
+\begin_inset Formula $50/50$
+\end_inset
+
+ based on responses observed so far in the trial.
+ 
+\end_layout
+
+\begin_layout Itemize
+The desired allocation proportion is usually motivated by an 
+\series bold
+ethical consideration of assigning more patients to better treatments
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+In this presentation, we discuss several classes of response-adaptive designs
+ and the advantages and disadvantages of these designs, and the analysis
+ of clinical trials based on adaptive designs.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Goals of Response Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Goals of Response Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The two main goals of response-adaptive designs are :-
+\end_layout
+
+\begin_layout Enumerate
+To maximize the individual patient’s personal experience in a trial under
+ certain restrictions.
+\end_layout
+
+\begin_layout Enumerate
+To reduce the overall number of patients (sample size) of a randomized clinical
+ trial.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Different Families of Response Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Different Families of Response Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The early ideas of adaptive designs can be traced back to Thompson and Robbins.
+ Since then, two main families of response-adaptive designs have been proposed
+ :-
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Target-based
+\series default
+, which is based on an optimal allocation target, where a 
+\series bold
+specific criterion 
+\series default
+is 
+\series bold
+optimized 
+\series default
+based on a 
+\series bold
+population model
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Different examples of Target Based Adaptive Designs are :-
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sequential maximum likelihood procedure.
+\end_layout
+
+\begin_layout Enumerate
+Doubly adaptive biased coin design.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Design-driven
+\series default
+, where designs are driven by intuition and are 
+\series bold
+not optimal 
+\series default
+in a formal sense.
+\end_layout
+
+\begin_layout Enumerate
+Few examples of these type of designs are (
+\series bold
+Urn Models
+\series default
+) :-
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Play-the-winner rule.
+\end_layout
+
+\begin_layout Enumerate
+Randomized play-the-winner rule.
+\end_layout
+
+\begin_layout Enumerate
+Drop-the-loser rule.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section
+Urn Models
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Origins of the test
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+One large class of response-adaptive designs is based on urn models which
+ are specifically design driven , are based on Urn Models.
+ 
+\end_layout
+
+\begin_layout Itemize
+Here we consider the simplest situation where two independent treatments
+ ‘‘A’’ and ‘‘B’’ with binary outcomes (Success or faliure) are compared
+ in the course of a trial.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $p_{A}$
+\end_inset
+
+ be the probability of a success on treatment 
+\begin_inset Formula $A$
+\end_inset
+
+ and let 
+\begin_inset Formula $p_{B}$
+\end_inset
+
+ be the success probability of treatment 
+\begin_inset Formula $B$
+\end_inset
+
+, with 
+\begin_inset Formula $q_{A}=1-p_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{B}=1-p_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+In addition, let 
+\begin_inset Formula $n$
+\end_inset
+
+ be the total number of patients in a trial, let 
+\begin_inset Formula $n_{A}$
+\end_inset
+
+ be the number of patients assigned to treatment 
+\begin_inset Formula $A$
+\end_inset
+
+, and let 
+\begin_inset Formula $n_{B}$
+\end_inset
+
+ be the number of patients assigned to 
+\begin_inset Formula $B$
+\end_inset
+
+, so that 
+\begin_inset Formula $n_{A}+n_{B}=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We here assume that the outcome can be observed relatively quickly.
+\end_layout
+
+\begin_layout Itemize
+Following the ethical imperative, one wants to change the allocation in
+ the course of a trial so that 
+\series bold
+more patients receive 
+\series default
+the 
+\series bold
+treatment performing better 
+\series default
+thus far in the trial.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Subsection
+Play-the-winner Rule
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Play-The-Winner Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This is one of the first response-adaptive designs, proposed by Zelen.
+\end_layout
+
+\begin_layout Itemize
+The first patient is equally likely to receive one of the two treatments.
+ 
+\end_layout
+
+\begin_layout Itemize
+The subsequent patient is assigned to the 
+\series bold
+same
+\series default
+ treatment following a 
+\series bold
+successful 
+\series default
+outcome, and to the 
+\series bold
+opposite 
+\series default
+treatment following a 
+\series bold
+failure
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Play-The-Winner Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+On average, the proportion of patients 
+\begin_inset Formula $\frac{n_{A}}{n}$
+\end_inset
+
+ assigned to treatment A is 
+\begin_inset Formula $\frac{q_{B}}{q_{A}+q_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Therefore this design assigned more patients to the better treatment.
+\end_layout
+
+\begin_layout Itemize
+We simulate two treatments 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ with success probabilities 
+\begin_inset Formula $p_{A}=0.3$
+\end_inset
+
+ & 
+\begin_inset Formula $p_{B}=0.6$
+\end_inset
+
+ and plot the allocation proportion for 
+\begin_inset Formula $A$
+\end_inset
+
+ :-
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Play-The-Winner Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot1.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of 
+\begin_inset Formula $\widehat{p}_{A}\text{ and }\widehat{p}_{B}$
+\end_inset
+
+ where 
+\begin_inset Formula $p_{A}=0.3,p_{B}=0.6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Play-The-Winner Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We also know that the allocation proportion for treatment 
+\begin_inset Formula $A$
+\end_inset
+
+ converges to 
+\begin_inset Formula $\frac{q_{B}}{q_{A}+q_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Since, here we have taken 
+\begin_inset Formula $p_{A}=0.3,p_{B}=0.6$
+\end_inset
+
+, the simulated allocation proportion for treatment A must converge to 
+\begin_inset Formula $\frac{q_{B}}{q_{A}+q_{B}}=\frac{0.4}{1.1}=\frac{4}{11}\approx0.364$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We try to validate the above statements using simulation and plot the allocation
+ proportions as a function of increasing sample size 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Play-The-Winner Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot3.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of 
+\begin_inset Formula $\nicefrac{n_{A}}{n}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Randomized play-the-winner Rule 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Randomized play-the-winner Rule 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This rule was suggested by Wei and Durham and Wei.
+\end_layout
+
+\begin_layout Itemize
+In this rule, the procedure is generally started with an urn containing
+ one ball of each type corresponding to the two treatments.
+\end_layout
+
+\begin_layout Itemize
+When a patient arrives, a ball is drawn from the urn and then replaced.
+\end_layout
+
+\begin_layout Itemize
+The patient receives corresponding treatment.
+\end_layout
+
+\begin_layout Itemize
+If the outcome is a 
+\series bold
+success
+\series default
+, 
+\series bold
+one ball of that type 
+\series default
+is 
+\series bold
+added 
+\series default
+to the urn.
+\end_layout
+
+\begin_layout Itemize
+Otherwise, 
+\series bold
+one ball 
+\series default
+of the 
+\series bold
+opposite type 
+\series default
+is added to the urn.
+\end_layout
+
+\begin_layout Itemize
+This design has the 
+\series bold
+same limiting allocation proportion 
+\series default
+as the play-the-winner rule i.e 
+\begin_inset Formula $\frac{n_{A}}{n}\overset{P}{\rightarrow}\frac{q_{B}}{q_{A}+q_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Randomized play-the-winner Rule 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot4.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of both 
+\begin_inset Formula $\widehat{p}_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\widehat{p}_{B}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Randomized play-the-winner Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot5.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of 
+\begin_inset Formula $\nicefrac{n_{A}}{n}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Drop-The-Loser Rule
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Drop-The-Loser Rule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+According to this rule, the urn starts with 
+\series bold
+one 
+\series default
+ball of 
+\series bold
+each treatment type 
+\series default
+and 
+\series bold
+one 
+\series default
+ball of the so-called 
+\series bold
+immigration type
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+When a patient arrives to be randomized to a treatment, a ball is taken
+ from the urn.
+ 
+\end_layout
+
+\begin_layout Itemize
+If it is an immigration ball, the ball is replaced and two additional balls
+ (one of each treatment type) are added to the urn.
+\end_layout
+
+\begin_layout Itemize
+If it is an actual treatment ball, a patient is assigned to corresponding
+ treatment and response is observed.
+\end_layout
+
+\begin_layout Itemize
+If response is a 
+\series bold
+failure
+\series default
+, the 
+\series bold
+ball 
+\series default
+is 
+\series bold
+not returned 
+\series default
+to the urn.
+\end_layout
+
+\begin_layout Itemize
+If response is a 
+\series bold
+success
+\series default
+, the ball is 
+\series bold
+returned 
+\series default
+to the urn (hence the urn composition remains unchanged).
+\end_layout
+
+\begin_layout Itemize
+In this case also, the 
+\series bold
+limiting allocation proportion 
+\series default
+is equal to 
+\begin_inset Formula $\frac{q_{B}}{q_{A}+q_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Generalized Friedman’s Urn (or, Generalized Poyla’s Urn) Model 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Generalized Urn Model 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+For clinical trials with 
+\begin_inset Formula $K$
+\end_inset
+
+ treatment
+\begin_inset Formula $\left(K\geq2\right)$
+\end_inset
+
+, an important family of urn models is the generalized Friedman’s urn.
+\end_layout
+
+\begin_layout Itemize
+In general the basic notions of the Friedman's Urn Scheme contains 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\dots,\alpha_{k}$
+\end_inset
+
+ number of balls for each of the 
+\begin_inset Formula $k$
+\end_inset
+
+ treatments.
+ One ball is drawn at random and 
+\begin_inset Formula $a$
+\end_inset
+
+ balls of the same type are added to the urn and 
+\begin_inset Formula $b$
+\end_inset
+
+ of the other types each are added as well.
+ 
+\end_layout
+
+\begin_layout Itemize
+We can note that all the urn schemes discussed before , can be treated as
+ a special case of the above.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Advantages of Designs Based on Urn Models
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Advantages of Designs Based on Urn Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Urn models are intuitive and easy to implement in clinical trials.
+\end_layout
+
+\begin_layout Enumerate
+They shift the allocation probability to better treatments.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Some drawbacks of Designs Based on Urn Models
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Some drawbacks of Designs Based on Urn Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+In most of the models, we can see that it can only target a specific allocation
+ proportion.
+ This allocation is usually not optimal in a formal sense.
+\end_layout
+
+\begin_layout Enumerate
+Tt can only be applied to the clinical trials with binary or multinomial
+ responses only.
+ Modifications are necessary to apply urn models to clinical trials with
+ continuous responses or survival responses.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Optimal Allocations
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimal Allocations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Response-adaptive designs were introduced following the ethical goal to
+ maximize an individual patient’s personal experience in the trial.
+\end_layout
+
+\begin_layout Itemize
+Another 
+\series bold
+important goal 
+\series default
+is to 
+\series bold
+maximize the power 
+\series default
+of treatment comparison.
+\end_layout
+
+\begin_layout Itemize
+These two goals 
+\series bold
+usually compete 
+\series default
+with each other.
+\end_layout
+
+\begin_layout Itemize
+Optimal allocation proportions are usually determined through some multiple-obje
+ctive optimality criteria.
+\end_layout
+
+\begin_layout Itemize
+Consider the situation when two binomials are compared and the measure of
+ interest is 
+\begin_inset Formula $p_{A}-p_{B}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimal Allocations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\widehat{p}_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\widehat{p}_{B}$
+\end_inset
+
+ be the corresponding maximum likelihood estimators of 
+\begin_inset Formula $p_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{B}$
+\end_inset
+
+.
+ The allocation that minimizes the variance of 
+\begin_inset Formula $\widehat{p}_{A}-\widehat{p}_{B}$
+\end_inset
+
+ is the 
+\series bold
+Neymann Allocation 
+\series default
+with :-
+\end_layout
+
+\begin_layout Enumerate
+They shift the allocation probability to better treatments.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+\frac{n_{A}}{n}=\frac{\sqrt{p_{A}q_{A}}}{\sqrt{p_{A}q_{A}}+\sqrt{p_{B}q_{B}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+An interesting fact about the 
+\series bold
+Neymann Allocation 
+\series default
+scheme is that for some values of 
+\begin_inset Formula $p_{A}\text{ and }p_{B}$
+\end_inset
+
+ it will assign more patients to the inferior treatment.
+ Since, then 
+\begin_inset Formula 
+\[
+\frac{n_{A}}{n_{B}}=\frac{\sqrt{p_{A}q_{A}}}{\sqrt{p_{B}q_{B}}}>1\cancel{\implies}p_{A}>p_{B}\forall\text{ }p_{A},p_{B}\in\left(0,1\right)
+\]
+
+\end_inset
+
+(which is obviously not desirable in terms of the ethical goal)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimal Allocations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Another goal, a compromise between the ethical goal and efficiency, is to
+ minimize the expected number of failures for a fixed variance of 
+\begin_inset Formula $\widehat{p}_{A}-\widehat{p}_{B}$
+\end_inset
+
+.
+ The optimal allocation for this goal is :-
+\begin_inset Formula 
+\[
+\frac{n_{A}}{n}=\frac{\sqrt{p_{A}}}{\sqrt{p_{A}}+\sqrt{p_{B}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This allocation also has the advantage of allocating more patients to better
+ treatment as :- 
+\begin_inset Formula 
+\[
+\frac{n_{A}}{n_{B}}=\sqrt{\frac{p_{A}}{p_{B}}}
+\]
+
+\end_inset
+
+so it serves both the goals simultaneously which is much desired.
+\end_layout
+
+\begin_layout Itemize
+For more than 
+\begin_inset Formula $2$
+\end_inset
+
+ treatments i.e 
+\begin_inset Formula $k$
+\end_inset
+
+ treatments in general, it is still unclear how to find optimal allocations
+ for general K treatment clinical trials !!
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Target-Based Response-Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Target-Based Response-Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Because optimal allocation usually 
+\series bold
+depends on 
+\series default
+some 
+\series bold
+unknown parameters
+\series default
+, we 
+\series bold
+cannot implement 
+\series default
+it in practice, unless we 
+\series bold
+estimate 
+\series default
+the 
+\series bold
+unknown parameters sequentially
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+In this section, we introduce two allocation procedures that use 
+\series bold
+sequential estimation 
+\series default
+of 
+\series bold
+unknown parameters
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+We consider the case of comparing two treatments with binary responses.
+ 
+\end_layout
+
+\begin_layout Itemize
+We also suppose that the 
+\series bold
+optimal allocation 
+\series default
+is the 
+\series bold
+target proportion
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Sequential Maximum Likelihood Procedure
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sequential Maximum Likelihood Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+To start, allocate 
+\begin_inset Formula $n_{0}\geq2$
+\end_inset
+
+ patients to both treatments 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Assume that we have assigned 
+\begin_inset Formula $j\left(j\geq2n_{0}\right)$
+\end_inset
+
+ patients in the trial and their responses have been observed.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\widehat{p}_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\widehat{p}_{B}$
+\end_inset
+
+ be the corresponding maximum likelihood estimators of 
+\begin_inset Formula $p_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{B}$
+\end_inset
+
+ based on the 
+\begin_inset Formula $j$
+\end_inset
+
+ responses.
+ 
+\end_layout
+
+\begin_layout Itemize
+Then we allocate the 
+\begin_inset Formula $\left(j+1\right)^{th}$
+\end_inset
+
+ patient to treatment 
+\begin_inset Formula $A$
+\end_inset
+
+ with probability :-
+\begin_inset Formula 
+\[
+\frac{\sqrt{\widehat{p}_{A}}}{\sqrt{\widehat{p}_{A}}+\sqrt{\widehat{p}_{B}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sequential Maximum Likelihood Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+From the invariance property of 
+\begin_inset Formula $MLE$
+\end_inset
+
+, we can show that this allocation proportion, in a limiting sense, converges
+ to the desired optimal allocation proportion 
+\begin_inset Formula $\frac{\sqrt{p_{A}}}{\sqrt{p_{A}}+\sqrt{p_{B}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Using simulation we can give evidence that the limiting allocation proportion
+ gets closer to the optimal allocation proportion 
+\begin_inset Formula $\frac{\sqrt{p_{A}}}{\sqrt{p_{A}}+\sqrt{p_{B}}}$
+\end_inset
+
+ :-
+\end_layout
+
+\begin_layout Itemize
+We plot the allocation proportion for Treatment A with increasing value
+ of 
+\begin_inset Formula $n$
+\end_inset
+
+ :-
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Allocation Proportion in SML Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot7.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\nicefrac{n_{A}}{n}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Doubly Adaptive Biased Coin Design
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Doubly Adaptive Biased Coin Design
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This procedure is a generalization of the sequential maxi- mum likelihood
+ procedure.
+ 
+\end_layout
+
+\begin_layout Itemize
+At first, allocate 
+\begin_inset Formula $n_{0}\geq2$
+\end_inset
+
+ patients to both treatments 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Suppose that we have assigned 
+\begin_inset Formula $j\left(j\geq2n_{0}\right)$
+\end_inset
+
+ patients in the trial and their responses have been observed.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\rho=\frac{\sqrt{p_{A}}}{\sqrt{p_{A}}+\sqrt{p_{B}}}$
+\end_inset
+
+ be the desired allocation.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Doubly Adaptive Biased Coin Design
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\widehat{\rho}$
+\end_inset
+
+ be the desired allocation, replaced by current estimates 
+\begin_inset Formula $\widehat{p}_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\widehat{p}_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\nicefrac{j_{A}}{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\nicefrac{j_{B}}{j}$
+\end_inset
+
+ be the current proportions of patients that have already been allocated
+ to 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Itemize
+Then we assign patient 
+\begin_inset Formula $j$
+\end_inset
+
+ to treatment 
+\begin_inset Formula $A$
+\end_inset
+
+ with probability 
+\begin_inset Formula $g\left(\nicefrac{j_{A}}{j},\widehat{\rho}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Here 
+\begin_inset Formula $g$
+\end_inset
+
+ is an allocation function belonging to the family of functions :-
+\begin_inset Formula 
+\[
+g\left(x,y\right)=\frac{y\left(\nicefrac{y}{x}\right)^{\gamma}}{y\left(\nicefrac{y}{x}\right)^{\gamma}+\left(1-y\right)\left(\nicefrac{1-y}{1-x}\right)^{\gamma}}\text{ where }\gamma\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Role of Parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in Determining Variability of The Procedure
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Role of Parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in Determining Variability of The Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+At the extreme, when 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+, we have the sequential maximum likelihood procedure, which converges to
+ the desired optimal allocation values :-
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot8.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{A}=0.3,p_{B}=0.7,\gamma=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Role of Parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in Determining Variability of The Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+As 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ increases, the procedure becomes more deterministic (allocates more patients
+ to better treatments) using simulation this can be shown :- 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot11.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{A}=0.3,p_{B}=0.7,\gamma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Role of Parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in Determining Variability of The Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+For quite large values of 
+\begin_inset Formula $\gamma\left(=10\right)$
+\end_inset
+
+, the procedure becomes more deterministic :-
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot9.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{A}=0.4,p_{B}=0.7,\gamma=10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Role of Parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in Determining Variability of The Procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Smaller the difference between the success probabilities, larger is the
+ variability (randomness) of the procedure :-
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename E:/Dekstop/ALL ONLINE CLASS NOTES/AB SIR/Rplot10.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{A}=0.6,p_{B}=0.7,\gamma=10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+So we can see that the allocation proportion for the better treatment 
+\begin_inset Formula $(B)$
+\end_inset
+
+ goes deterministically to 
+\begin_inset Formula $1$
+\end_inset
+
+ as 
+\begin_inset Formula $n$
+\end_inset
+
+ increases.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Important Issues in Adaptive Design
+\end_layout
+
+\begin_layout Subsection
+Variability and Power of Using Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Variability and Power of Using Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When using response-adaptive designs in clinical trials, the number of patients
+ assigned to each treatments are random variables.
+\end_layout
+
+\begin_layout Itemize
+Therefore the power 
+\begin_inset Formula $P\left(\text{rejecting }\mathscr{H}_{0}|\mathscr{H}_{0}\text{ false}\right)$
+\end_inset
+
+ (for most testing hypotheses and alternatives) is also a random variable.
+ Here we generally consider hypothesis like :-
+\begin_inset Formula 
+\begin{align*}
+\mathscr{H}_{0}: & p_{A}=p_{B}\\
+\mathscr{H}_{1}: & p_{A}\neq p_{B}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The variability of allocation has a strong effect on the power.
+\end_layout
+
+\begin_layout Itemize
+Hu and Rosenberger show that the 
+\series bold
+average power of a randomization procedure 
+\series default
+is a 
+\series bold
+decreasing function 
+\series default
+of the 
+\series bold
+variability of the procedure
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Variability and Power of Using Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The drop-the-loser rule has minimum variability (lower bound) in the class
+ of all response-adaptive procedures targeting urn allocation 
+\begin_inset Formula $\frac{q_{B}}{q_{A}+q_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The doubly adaptive biased coin design can directly target any given allocation
+ (may depend on unknown parameters).
+\end_layout
+
+\begin_layout Itemize
+At the extreme, when 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+, we have the sequential maximum likelihood procedure, which has the highest
+ variability.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Variability and Power of Using Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+As 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ tends to 
+\begin_inset Formula $\infty$
+\end_inset
+
+, we have a procedure that attains the lower bound of any randomization
+ procedure targeting the same allocation.
+\end_layout
+
+\begin_layout Itemize
+As 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ becomes smaller, we have more randomization, but also more variability.
+\end_layout
+
+\begin_layout Itemize
+Overall, the doubly adaptive biased coin procedure is the most favorable
+ design as :-
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It is flexible in terms of targeting any desired allocation.
+\end_layout
+
+\begin_layout Itemize
+It can be applied to different types of responses.
+\end_layout
+
+\begin_layout Itemize
+One can tune the parameter 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ to reflect the 
+\series bold
+tradeoff 
+\series default
+between the 
+\series bold
+degree of randomization 
+\series default
+and 
+\series bold
+variability
+\series default
+, and the tradeoff between 
+\series bold
+power 
+\series default
+and 
+\series bold
+expected treatment successes
+\series default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sample Size of Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sample Size of Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It is usually difficult to determine the required sample size for response-adapt
+ive designs.
+\end_layout
+
+\begin_layout Itemize
+This is because the allocation probabilities keep changing during a clinical
+ trial when using response-adaptive design.
+\end_layout
+
+\begin_layout Itemize
+For a fixed sample size, the number of patients assigned to each treatment
+ is a random variable.
+\end_layout
+
+\begin_layout Itemize
+Therefore the power is also a random variable for a fixed sample size.
+\end_layout
+
+\begin_layout Itemize
+In the literature, sample sizes of response-adaptive designs are calculated
+ by ignoring the randomness of the allocations.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Applying Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Applying Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The randomized play-the-winner rule was used in the highly controversial
+ extracorporeal membrane oxygena- tion (ECMO) study.
+\end_layout
+
+\begin_layout Itemize
+Adaptive designs have been implemented in several clinical trails such as
+ :-
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A trial of crystalloid preload in hypotension for cesarean patients.
+\end_layout
+
+\begin_layout Itemize
+A trial of fluoxetine vs.
+ placebo in depression patients.
+\end_layout
+
+\begin_layout Itemize
+A four-arm trial in depression.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Adaptive designs have also been used extensively in adaptive learning algorithms
+, game theory, as well as dynamical systems.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Some Important Issues Regarding Adaptive Designs
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Some Important Issues Regarding Adaptive Designs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In the above discussion, we assume that individual patient outcome will
+ be immediately available.
+\end_layout
+
+\begin_layout Itemize
+For clinical trials with delayed responses, we can update the urn when the
+ response becomes available.
+\end_layout
+
+\begin_layout Itemize
+For doubly adaptive biased coin designs, the unknown parameters are estimated
+ sequentially and the delayed responses effect these estimators.
+\end_layout
+
+\begin_layout Itemize
+The properties of doubly adaptive biased coin design with delayed responses
+ are unknown, and this is a topic of future research.
+\end_layout
+
+\begin_layout Itemize
+It is also unclear how delayed responses will affect the birth-and-death
+ urn and the treatment effective mapping.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
